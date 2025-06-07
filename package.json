@@ -1,8 +1,12 @@
 {
-  "name": "@htmx/template-element",
-  "version": "0.0.0",
-  "description": "A custom element for adding a toolbar to a textarea for markdown editing.",
-  "repository": "zeiss/template-element",
+  "name": "@htmx/htmx-toasts",
+  "version": "1.0.0",
+  "description": "A simple toast notification system for htmx",
+  "repository": "katallaxie/htmx-toasts-element",
+  "author": {
+    "name": "Sebastian Döll",
+    "email": "sebastian@katallaxie.dev"
+  },
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
