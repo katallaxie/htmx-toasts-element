@@ -1,0 +1,47 @@
+{
+  "name": "@htmx/template-element",
+  "version": "0.0.0",
+  "description": "A custom element for adding a toolbar to a textarea for markdown editing.",
+  "repository": "zeiss/template-element",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "tsc-watch --onSuccess 'http-server . --port 8080 -c-1'",
+    "lint": "eslint src/*.ts",
+    "prebuild": "npm run clean && npm run lint && mkdir dist",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "vitest --run",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm publish --ignore-scripts --@github:registry='https://npm.pkg.github.com'"
+  },
+  "keywords": [
+    "custom-element",
+    "markdown"
+  ],
+  "prettier": "@github/prettier-config",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@github/prettier-config": "0.0.6",
+    "@open-wc/testing-helpers": "^3.0.1",
+    "@types/jest": "^29.5.14",
+    "construct-style-sheets-polyfill": "^3.1.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-github": "^6.0.0",
+    "http-server": "^14.1.1",
+    "jsdom": "^26.1.0",
+    "tsc-watch": "^7.1.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vitest": "^3.2.2"
+  },
+  "eslintIgnore": [
+    "dist/"
+  ]
+}
