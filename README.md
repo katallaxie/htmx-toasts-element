@@ -10,7 +10,7 @@ This is a simple HTMX element that can be used to display toasts in your web app
 ## Usage
 
 ```html
-<template id="htmx-toasts-template">
+<template>
   <div class="alert" slot="alert">
     <span slot="message"></span>
     <button type="button" class="btn btn-sm btn-outline" aria-label="Close" slot="close">Close</button>
@@ -32,8 +32,8 @@ This is a simple HTMX element that can be used to display toasts in your web app
 - `error-class` - The class to apply to the toast when it is an error.
 - `info-class` - The class to apply to the toast when it is an info message.
 - `warn-class` - The class to apply to the toast when it is a warning.
-- `templateId`- The id of the `template` element to use to insert in the toast.
-- `stylesheetHref` - The url to the stylesheet for the toasts.
+- `template-id`- The id of the `template` element to use to insert in the toast.
+- `stylesheet-href` - The url to the stylesheet for the toasts.
 
 ## Installation
 
