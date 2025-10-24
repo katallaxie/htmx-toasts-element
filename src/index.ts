@@ -51,6 +51,14 @@ export class HTMXToastsElement extends HTMLElement {
     return this.getAttribute('warn-class') ?? 'alert-warning'
   }
 
+  get templateId(): string {
+    return this.getAttribute('template-id') ?? '#htmx-toasts-template'
+  }
+
+  get stylesheetHref(): string {
+    return this.getAttribute('stylesheet-url') ?? 'https://unpkg.com/fiber-htmx@1.3.32/dist/out.css'
+  }
+
   notifications = new Array<Notification>()
 
   connectedCallback(): void {
@@ -70,7 +78,7 @@ export class HTMXToastsElement extends HTMLElement {
 
     const styles = document.createElement('link')
     styles.rel = 'stylesheet'
-    styles.href = 'https://unpkg.com/fiber-htmx@1.3.32/dist/out.css'
+    styles.href = this.stylesheetHref
     styles.type = 'text/css'
     this.shadowRoot?.appendChild(styles)
 
@@ -84,7 +92,7 @@ export class HTMXToastsElement extends HTMLElement {
   addToast(e: CustomEvent<Notify>): void {
     const notifcation = {id: e.timeStamp, ...e.detail}
     this.notifications.push(notifcation)
-    const template = document.querySelector('#htmx-toasts-template') as HTMLTemplateElement
+    const template = document.querySelector(this.templateId) as HTMLTemplateElement
     const templateContent = template?.content as DocumentFragment
     const tpl = templateContent.cloneNode(true) as DocumentFragment
 
