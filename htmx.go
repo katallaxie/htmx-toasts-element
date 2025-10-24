@@ -34,3 +34,13 @@ func HTMXToastsInfoClass(class string) htmx.Node {
 func HTMXToastsWarningClass(class string) htmx.Node {
 	return htmx.Attribute("warning-class", class)
 }
+
+// HTMXToastsStyleSheetHref returns the href for the HTMX toasts stylesheet.
+func HTMXToastsStyleSheetHref(href string) htmx.Node {
+	return htmx.Attribute("stylesheet-href", href)
+}
+
+// HTMXToastsTemplateId sets the template ID for the toasts.
+func HTMXToastsTemplateId(id string) htmx.Node {
+	return htmx.Attribute("template-id", id)
+}

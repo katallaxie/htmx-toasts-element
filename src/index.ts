@@ -56,7 +56,7 @@ export class HTMXToastsElement extends HTMLElement {
   }
 
   get stylesheetHref(): string {
-    return this.getAttribute('stylesheet-url') ?? 'https://unpkg.com/fiber-htmx@1.3.32/dist/out.css'
+    return this.getAttribute('stylesheet-href') ?? 'https://unpkg.com/fiber-htmx@1.3.32/dist/out.css'
   }
 
   notifications = new Array<Notification>()
