@@ -39,7 +39,7 @@
     "eslint": "^9.28.0",
     "eslint-plugin-github": "^6.0.0",
     "http-server": "^14.1.1",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.0.1",
     "tsc-watch": "^7.1.1",
     "typescript": "^5.7.2",
     "vite": "^7.1.12",
