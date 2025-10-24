@@ -18,7 +18,7 @@ func TestHTMXToasts(t *testing.T) {
 	}{
 		{
 			name: "HTMXToasts",
-			node: toasts.HTMXToasts(),
+			node: toasts.Toasts(),
 			want: `<htmx-toasts></htmx-toasts>`,
 		},
 		{
