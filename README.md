@@ -21,6 +21,7 @@ This is a simple HTMX element that can be used to display toasts in your web app
   class="toast"
   role="status"
   aria-live="polite"
+  success-class="alert-success"
   error-class="alert-error"
   info-class="alert-info"
   warn-class="alert-warning"></htmx-toasts>
@@ -29,6 +30,7 @@ This is a simple HTMX element that can be used to display toasts in your web app
 ## Attributes
 
 - `timeout` - The time in milliseconds that the toast will be displayed.
+- `success-class` - The class to apply to the toast when it is a success.
 - `error-class` - The class to apply to the toast when it is an error.
 - `info-class` - The class to apply to the toast when it is an info message.
 - `warn-class` - The class to apply to the toast when it is a warning.

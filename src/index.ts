@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-type Level = 'info' | 'warn' | 'error'
+type Level = 'info' | 'warn' | 'error' | 'success'
 type Code = number
 type Message = string
 
@@ -41,6 +41,10 @@ export class HTMXToastsElement extends HTMLElement {
 
   get errorClass(): string {
     return this.getAttribute('error-class') ?? 'alert-error'
+  }
+
+  get successClass(): string {
+    return this.getAttribute('success-class') ?? 'alert-success'
   }
 
   get infoClass(): string {
@@ -115,6 +119,10 @@ export class HTMXToastsElement extends HTMLElement {
 
     if (alert && notifcation.level === 'error') {
       alert.classList.add(this.errorClass)
+    }
+
+    if (alert && notifcation.level === 'success') {
+      alert.classList.add(this.successClass)
     }
 
     const close = tpl.querySelector('[slot="close"]') as HTMLButtonElement
